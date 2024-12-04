@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './GitHubSearch.css';
 
 function GitHubSearch() {
     const [username, setUsername] = useState('');
@@ -21,8 +22,8 @@ function GitHubSearch() {
     };
 
     return (
-        <div>
-            <h1>Pesquisar Usuário do GitHub</h1>
+        <div className="container">
+            <h1>&#128270; Pesquisar Usuário do GitHub </h1>
             <input
                 type="text"
                 value={username}
@@ -32,16 +33,16 @@ function GitHubSearch() {
             <button onClick={searchUser}>Pesquisar</button>
 
             {userData && (
-                <div>
+                <div className="usuario-info">
                     <h2>Informações do Usuário</h2>
-                    <p>Nome: {userData.name}</p>
-                    <p>Bio: {userData.bio}</p>
-                    <p>Seguidores: {userData.followers}</p>
+                    <p><strong>Nome:</strong> {userData.name}</p>
+                    <p><strong>Bio:</strong> {userData.bio}</p>
+                    <p><strong>Seguidores:</strong> {userData.followers}</p>
                 </div>
             )}
 
             {repos.length > 0 ? (
-                <div>
+                <div className="repositorio-info">
                     <h2>Repositórios</h2>
                     <ul>
                         {repos.map((repo) => (
@@ -49,9 +50,8 @@ function GitHubSearch() {
                         ))}
                     </ul>
                 </div>
-            ) : 
-            (
-                <p>Nenhum repositório encontrado.</p>
+            ) : (
+                <p className="no-repositorio">Nenhum repositório encontrado.</p>
             )}
         </div>
     );
