@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './GitHubSearch.css';
+import Swal from 'sweetalert2';
 
 function GitHubSearch() {
     const [username, setUsername] = useState('');
@@ -12,12 +13,17 @@ function GitHubSearch() {
         {
             const userResponse = await axios.get(`http://localhost:8080/api/github/user/${username}`);
             setUserData(userResponse.data);
-
+    
             const reposResponse = await axios.get(`http://localhost:8080/api/github/repos/${username}`);
             setRepos(reposResponse.data);
-        } catch (error) {
+        } catch (error) 
+        {
             console.error("Erro ao buscar dados do GitHub:", error);
-            alert("Usuário não encontrado ou erro de conexão.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuário não encontrado ou erro de conexão!',
+            });
         }
     };
 
