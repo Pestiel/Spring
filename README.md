@@ -8,7 +8,7 @@ Este projeto consiste em duas aplicações: uma aplicação backend desenvolvida
 
 Antes de começar, verifique se você tem os seguintes softwares instalados:
 
-Java 11+ (para rodar a aplicação Spring Boot)
+Java 8+ (para rodar a aplicação Spring Boot)
 
 Node.js e npm (para rodar a aplicação React)
 
@@ -30,7 +30,7 @@ Navegue até o diretório do projeto Spring Boot:
 
 `cd Spring`
 
-Certifique-se de ter o Java 11+ instalado e configure as variáveis de ambiente, se necessário.
+Certifique-se de ter o Java 8+ instalado e configure as variáveis de ambiente, se necessário.
 
 Compile e inicie o servidor Spring Boot com o comando:
 
@@ -86,3 +86,5 @@ Sinta-se à vontade para contribuir com melhorias e correções de bugs. Para is
 3- Realize as alterações e faça commit.
 
 4- Envie um pull request.
+
+Agradeço pela ajuda.😁
