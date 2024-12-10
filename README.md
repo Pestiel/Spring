@@ -64,6 +64,25 @@ Spring: A aplicação backend expõe uma API REST em `http://localhost:8080`, qu
 
 React: A aplicação frontend será carregada em `http://localhost:3000`. Você pode interagir com a interface para buscar dados de usuários do GitHub e visualizar seus repositórios.
 
+# Estrutura do Projeto
+
+```
+Spring
+├── React/front # Pasta contendo todo conteúdo React.
+│    └── src/ 
+│         ├── GitHubSearch.js # Arquivo javascript.
+│         └── GitHubSearch.css # Arquivo css.
+│
+├── Spring # Pasta contendo todo conteúdo Spring boot.
+│     └── src/
+│          └── main/
+│               └── java/com/example/Spring
+│                    ├── Application.java # Aplicação padrão.
+│                    ├── GitHubController.java # Controller principal.
+│                    ├── HomeController.java # Controller teste afins.
+│                    └── WebConfig.java # Arquivo de configuração CORS.
+└── README.md
+```
 
 # Problemas Comuns e Soluções
 
